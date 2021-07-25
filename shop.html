@@ -29,42 +29,8 @@ body {
 <div class="header">
   <h1>Welcome</h1>
   <p>Balloons Accepted</p>
-</div>
+</div>  
 
-<script>  
-  var selectBox = document.getElementById("selectMe")
-selectBox.selectedIndex = parseInt(selectBox.length / 2);
-
-selectBox.onchange = function () {
-    changeButton(this.value);
-}
-
-changeButton(selectBox.value);
-
-function changeButton(val) {
-    console.log(val)
-    var i = -1, elements = document.querySelectorAll('[class=group]');
-    while (elements[++i]) {
-        console.log(elements[i]);
-        elements[i].style.display = (elements[i].id == val) ? "block" : "none";
-    }
-}
-  </script>  
-  
-
-  
- <select id="selectMe">
-    <option value="option1">A</option>
-    <option value="option2">B</option>
-    <option value="option3">C</option>
-</select>
-
-<div>
-    <div id="option1" class="group">A</div>
-    <div id="option2" class="group">B</div>
-    <div id="option3" class="group">C</div>
-</div> 
-  
   
   
 <div class="content">
