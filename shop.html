@@ -31,6 +31,42 @@ body {
   <p>Balloons Accepted</p>
 </div>
 
+<script>  
+  var selectBox = document.getElementById("selectMe")
+selectBox.selectedIndex = parseInt(selectBox.length / 2);
+
+selectBox.onchange = function () {
+    changeButton(this.value);
+}
+
+changeButton(selectBox.value);
+
+function changeButton(val) {
+    console.log(val)
+    var i = -1, elements = document.querySelectorAll('[class=group]');
+    while (elements[++i]) {
+        console.log(elements[i]);
+        elements[i].style.display = (elements[i].id == val) ? "block" : "none";
+    }
+}
+  </script>  
+  
+
+  
+ <select id="selectMe">
+    <option value="option1">A</option>
+    <option value="option2">B</option>
+    <option value="option3">C</option>
+</select>
+
+<div>
+    <div id="option1" class="group">A</div>
+    <div id="option2" class="group">B</div>
+    <div id="option3" class="group">C</div>
+</div> 
+  
+  
+  
 <div class="content">
 <table style="width:100%">
 <tr>
@@ -40,20 +76,18 @@ body {
   <tr>
     <td><h1>10 balloons</h1></td>
     <td><h1>10 balloons</h1></td>
-</table>
-<hr>
-<table style="width:100%">
-<tr>
+</tr>
+  <tr>
     <td><a href="items/50likes"><img src="Assets/828EEBE5-C983-4BDC-843D-AAFA1D922D53.jpeg" alt="50 Likes" height=200 width=200></a></td>
-    <td><a href="items/shoutout"><img src="Assets/F88575C5-EFAE-46DB-A4F1-689F2CB76C1D.jpeg" alt="50 Likes" height=200 width=200></a></td>
+    <td><a href="items/shoutout"><img src="Assets/F88575C5-EFAE-46DB-A4F1-689F2CB76C1D.jpeg" alt="shoutout" height=200 width=200></a></td>
   </tr>
   <tr>
     <td><h1>50 balloons</h1></td>
     <td><h1>10 balloons</h1></td>
+  </tr>
 </table>
 
       
-</table>
 </div>
 ​
 </body>
