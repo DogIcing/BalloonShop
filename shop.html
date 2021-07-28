@@ -5,6 +5,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  
+  
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+​
+.price {
+  color: grey;
+  font-size: 22px;
+}
+​
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+​
+.card button:hover {
+  opacity: 0.7;
+}
+  
+  
 /* Style the body */
 .sale {
   color: yellow;
@@ -54,6 +86,13 @@ body {
 </tr>
   <tr>
     <td><a href="items/50likes"><img src="Assets/828EEBE5-C983-4BDC-843D-AAFA1D922D53.jpeg" alt="50 Likes" height=200 width=200></a></td>
+    <td>     <div class="card">
+  <img src="Assets/828EEBE5-C983-4BDC-843D-AAFA1D922D53.jpeg" alt="50 Likes" style="width:100%">
+  <h1>Tailored Jeans</h1>
+  <p class="price">50 &#127880</p>
+  <p><button>Add to Cart</button></p>
+  </div>
+   </td>
     <td><a href="items/shoutout"><img src="Assets/F88575C5-EFAE-46DB-A4F1-689F2CB76C1D.jpeg" alt="shoutout" height=200 width=200></a></td>
   </tr>
   <tr>
@@ -61,9 +100,10 @@ body {
     <td><h1 class="standard">10 balloons</h1></td>
   </tr>
 </table>
-
-      
+  
 </div>
-​
+  
+  
+
 </body>
 </html>
