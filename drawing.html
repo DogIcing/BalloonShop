@@ -223,7 +223,9 @@ function showSlides(n) {
 }
 </script>
     </td>
-    <td><div id=price></div></td> 
+    <td><div id=price></div></td>
+    <br>
+    <button type="button" onclick="recalculate()">Recalculate Total</button>
   </tr>
   <tr>
     <td>
@@ -243,6 +245,76 @@ function showSlides(n) {
       </select>
       <script>
         var size = document.getElementById("picker").value;
+        var shadow = null
+      </script>
+      <br>
+      <label for="shadowCheck">Add Shadow (+1 &#x1F388;)</label>
+      <input type="checkbox" onclick="shadow()" id="shadowCheck">
+      <script>                                             
+      function shadow() {
+        var ShadowCheckBox = document.getElementById("shadowCheck");
+        if (ShadowCheckBox.checked == true){
+        let ShadowSelected = true;
+        }
+        else {
+        let ShadowSelected = false;
+        }
+     } 
+      </script>
+      <br>
+      <label for="removebg">Remove BG (+1 &#x1F388;)</label>
+      <input type="checkbox" onclick="removeBG()" id="removebg">
+      <script>                                             
+      function removeBG() {
+        var RemoveBGCheckbox = document.getElementById("removebg");
+        if (RemoveBGCheckbox.checked == true){
+        let RemoveBackground = true;
+        }
+        else {
+        let RemoveBackground = false;
+        }
+     } 
+      </script>
+      <br>
+      <script>
+    function invalid() {
+      if (RemoveBGCheckbox.checked == true){
+        let invalid = "The Below Will Not Be Taken Into Account &#x2193;";
+        }
+        else {
+        let invalid = "";
+        }
+      document.getElementById("InvalidOrNot").innerHTML = invalid;
+    }
+      </script>
+      <div id="InvalidOrNot"></div>
+      Select a background color: 
+      <input type="color" id="ColorSelector">
+      <script>
+        var BackgroundColor = document.getElementById("ColorSelector");
+      </script>
+      <br>
+      <script>                                             
+      function recalculate() {
+        if (ShadowSelected == true){
+          let total += 1;
+          let shadow_selected = "Yes to shadows";
+        }
+        if (ShadowSelected == false){
+          let shadow_selected = "No to shadows";
+        }
+        if (size == "custom"){
+          let total += 4;
+        }
+        if (RemoveBackground == true){
+          let total += 1;
+          let RemoveBackground = "Yes to remove background";
+        }
+        if (RemoveBackground == false){
+          let BG = "A background colour of " + BackgroundColor;
+          let RemoveBackground = "No to remove background";
+        }
+        let Customisation = "You have Selected: "+shadow_selected+", Size: "+size+", "+RemoveBackground+", "+BG+"."
       </script>
     </td>
   </tr>
