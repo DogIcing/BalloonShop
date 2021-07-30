@@ -68,6 +68,7 @@
       <input type="color" id="ColorSelector">
       <script>
         var BackgroundColor = document.getElementById("ColorSelector");
+        document.getElementById("colorthing").innerHTML = BackgroundColor;
       </script>
       <br>
       <script>                                             
@@ -94,6 +95,7 @@
         let Customisation = "You have Selected: "+shadow_selected+", Size: "+size+", "+RemoveBackground+", "+BG+"."
         document.getElementById("customisationsummary").innerHTML = Customisation;
       </script>
+          <p id="colorthing"></p>
       
       </body>
       </html>
